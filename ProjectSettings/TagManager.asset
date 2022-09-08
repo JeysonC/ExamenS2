@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CheckPoint
   - DarkHole
+  - Zombie
   layers:
   - Default
   - TransparentFX
