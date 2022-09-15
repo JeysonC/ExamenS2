@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ZombieController : MonoBehaviour
 {
-
+    public float velocidad;
     Rigidbody2D rb;
     SpriteRenderer sr;
     Animator animator;
@@ -21,9 +21,15 @@ public class ZombieController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(10, rb.velocity.y);
+        rb.velocity = new Vector2(velocidad, rb.velocity.y);
         CambiarAnimacion(ANIMACION_RUN);
-        sr.flipX = true;
+    }
+
+    private void OnTriggerExist2D(Collider2D other){
+        if(other.gameObject.tag == "plataforma"){
+            velocidad *= -1;
+            this.transform.localScale = new Vector2(this.transform.localScale.x*-1, this.transform.localScale.y);
+        }
     }
     private void CambiarAnimacion(int animacion){
         animator.SetInteger("EstadoZombie", animacion);

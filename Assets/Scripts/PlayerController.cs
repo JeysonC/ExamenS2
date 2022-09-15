@@ -10,10 +10,14 @@ public class PlayerController : MonoBehaviour
 
     public GameObject bullet;
 
+    public AudioClip jumpclip;
+
     Rigidbody2D rb;
     SpriteRenderer sr;
     Animator animator;
     BoxCollider2D boxcollider;
+
+    AudioSource audiosource;
 
     const int ANIMATION_IDLE = 0;
     const int ANIMATION_WALK = 1;
@@ -36,6 +40,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         boxcollider = GetComponent<BoxCollider2D>();
         saltosRestantes = saltosMaximos;
+        audiosource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -63,6 +68,7 @@ public class PlayerController : MonoBehaviour
             CambiarAnimacion(ANIMATION_JUMP);
             //saltosRestantes--;
             puedeSaltar = false;
+            audiosource.PlayOneShot(jumpclip);
         }
 
         //Disparar

@@ -37,6 +37,7 @@ public class BulletController : MonoBehaviour
             Destroy(other.gameObject);
 
             gamemanager.PerderBalas(1);
+            gamemanager.SaveGame();
         }
     }
 }
