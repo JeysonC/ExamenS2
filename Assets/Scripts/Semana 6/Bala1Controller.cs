@@ -8,6 +8,7 @@ public class Bala1Controller : MonoBehaviour
     public int danio = 1;
 
     Rigidbody2D rb;
+    Animator animator;
 
     float realVelocity;
 
@@ -23,6 +24,7 @@ public class Bala1Controller : MonoBehaviour
         danio = d;
     }
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -33,6 +35,8 @@ public class Bala1Controller : MonoBehaviour
     {
         rb.velocity = new Vector2(realVelocity,0);
     }
+
+    
 
     void OnCollisionEnter2D(Collision2D other){
         Destroy(this.gameObject);

@@ -6,7 +6,7 @@ public class MPlayerController : MonoBehaviour
 {
     private float velocidad = 10, fuerzaSalto = 15;
 
-    public GameObject primeraBala, segundaBala;
+    public GameObject primeraBala;
     
     private float timeLeft = 0;
 
@@ -63,7 +63,7 @@ public class MPlayerController : MonoBehaviour
         if(Input.GetKey(KeyCode.X)){
             CambiarAnimacion(ANIMACION_POTENCE);
             timeLeft += Time.deltaTime;
-            Debug.Log(timeLeft);
+            Debug.Log("Tiempo: "+timeLeft);
         }
         //ATACAR CON TIEMPO
         if(timeLeft < 1){
