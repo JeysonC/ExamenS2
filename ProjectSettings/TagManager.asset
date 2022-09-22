@@ -8,6 +8,7 @@ TagManager:
   - DarkHole
   - Zombie
   - Plataforma
+  - Enemy
   layers:
   - Default
   - TransparentFX
