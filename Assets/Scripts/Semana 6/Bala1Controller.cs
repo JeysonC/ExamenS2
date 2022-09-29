@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bala1Controller : MonoBehaviour
 {
     private float velocidadBala = 25;
-    public int danio = 1;
+    public int danio;
 
     Rigidbody2D rb;
     Animator animator;
