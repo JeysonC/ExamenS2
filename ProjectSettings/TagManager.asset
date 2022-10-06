@@ -9,6 +9,10 @@ TagManager:
   - Zombie
   - Plataforma
   - Enemy
+  - BaseMuerte
+  - LimitePlat
+  - ZSaltarin
+  - CheckPoint1
   layers:
   - Default
   - TransparentFX
